@@ -1,0 +1,15 @@
+<div class="boxPrincipal">
+  <input type="text" (keyup.enter)="escolheRegiao($event)" />
+  <div class="Paragrafos">
+    <p>Região: {{ infoService.lista2.region }}</p>
+    <p>Sigla: {{ infoService.lista2.acronym }}</p>
+  </div>
+</div>
+
+<app-inforegiao
+  *ngFor="let infos of infoService.lista; index as i"
+  [data]="infos.date"
+  [dataBr]="infos.date_br"
+  [texto]="infos.text"
+  [numero]="i + 1"
+></app-inforegiao>
