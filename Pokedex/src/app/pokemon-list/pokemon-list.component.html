@@ -1,0 +1,16 @@
+<select class="Select" (change)="Pokemon($event)">
+    <option 
+        *ngFor="let pokemon of pokemonService.pokemons; index as i"
+        [value]="i + 1"> 
+        {{ pokemon.name }}
+    </option>
+</select>
+
+<app-pokemon-card
+   *ngFor="let pokemon of pokemonService.infoPokemonPuxado"
+   [nome]="pokemon.name"
+   [url]="pokemon.url"
+   [img]="imagem"
+></app-pokemon-card>
+
+
