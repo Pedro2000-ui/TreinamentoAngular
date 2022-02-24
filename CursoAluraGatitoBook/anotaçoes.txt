@@ -1,0 +1,34 @@
+Observable - Objeto que encapsula uma operação e 
+retorna as informações (sucesso ou erro)
+ 
+
+required no HTML - Só pra retornar como invalid caso
+os campos não sejam preenchidos
+
+
+
+
+Não entendi o uso do '?' nem de erros.required (nesse caso)
+novoUsuarioForm.get('email')?.errors?.required &&
+novoUsuarioForm.get('email')?.touched
+
+? -> Safe Navigation
+
+
+Não entendi!
+usuarioJaExiste() {
+    return (control: AbstractControl) => {
+      return control.valueChanges.pipe(
+        switchMap((nomeUsuario) => this.novoUsuarioService.verificaUsuarioExistente(nomeUsuario)
+        )
+      );
+    };
+  }
+
+
+Gerando pacote para produção com angular CLI:
+No CMD: Instalando um servidor http 
+- npm i -g http-server
+- ng build --prod -> vai gerar o pacote para produção
+
+- dentro da pasta dist/pastadoprojeto http-server -> Sobe o servidor que geramos para produção
