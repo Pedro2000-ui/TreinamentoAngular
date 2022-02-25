@@ -7,4 +7,12 @@
 </select>
 
 
+<app-pokemon-card
+   *ngFor="let pokemon of pokemonService.infoPokemonPuxado"
+   [nome]="pokemon.name"
+   [url]="pokemon.url"
+   [img]="imagem"
+></app-pokemon-card>
+
+
 <button></button>
