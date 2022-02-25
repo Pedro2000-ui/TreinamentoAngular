@@ -1,7 +1,7 @@
 <select class="Select" (change)="Pokemon($event)">
-    <option 
+    <option
         *ngFor="let pokemon of pokemonService.pokemons; index as i"
-        [value]="i + 1"> 
+        [value]="i + 1">
         {{ pokemon.name }}
     </option>
 </select>
@@ -13,4 +13,4 @@
    [img]="imagem"
 ></app-pokemon-card>
 
-
+<button></button>
